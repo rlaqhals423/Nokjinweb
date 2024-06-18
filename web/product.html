@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>자연을 담은 우리식 페스토, 녹진</title>
+		   <!-- Other meta tags and stylesheets -->
+		   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+		   <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+		   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+		   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	  
+		  <style>
+			body {
+			  font-family: 'Quicksand', 'Pretendard', sans-serif;
+			}
+			.navbar-custom {
+			  background-color: #5f3214 !important;
+			}
+			.navbar-custom .navbar-brand,
+			.navbar-custom .navbar-nav .nav-link {
+			  color: #9ecced;
+			}
+			.navbar-custom .navbar-brand:hover,
+			.navbar-custom .navbar-nav .nav-link:hover {
+			  color: #fff;
+			}
+			.carousel-item img {
+			  width: 100%;
+			  height: 50vh;
+			  object-fit: cover;
+			}
+			.btn-primary {
+			  background-color: #5f3214;
+			  border-color: #5f3214;
+			}
+			.btn-primary:hover {
+			  background-color: #9ecced;
+			  border-color: #9ecced;
+			}
+			.jumbotron-custom {
+			  background-color: #9ecced;
+			  padding: 4rem 2rem;
+			  margin-top: 2rem;
+			  color: #5f3214;
+			}
+			.footer-custom {
+			  background-color: #5f3214;
+			  color: #9ecced;
+			  padding: 1rem 0;
+			}
+			.carousel-caption {
+			  position: absolute;
+			  top: 10%;
+			  left: 10%;
+			  transform: translate(0, 0);
+			  color: #5f3214;
+			  text-align: left;
+			  padding: 20px;
+			  font-family: 'Pretendard', 'Quicksand', sans-serif;
+			}
+			.scrolling-wrapper {
+			  overflow-x: auto;
+			  white-space: nowrap;
+			}
+			.scrolling-wrapper .card {
+			  display: inline-block;
+			  width: 18rem;
+			  margin-right: 1rem;
+			  transition: transform 0.3s;
+			}
+			.scrolling-wrapper .card:hover {
+			  transform: scale(1.05);
+			}
+			.fade-in {
+			  opacity: 0;
+			  transition: opacity 1.5s ease-in-out;
+			}
+			.fade-in.visible {
+			  opacity: 1;
+			}
+			h2 {
+			  font-size: 40pt;
+			  font-weight: 700;
+			  color: #9ecced;
+			}
+		
+			/* New CSS animations */
+			@keyframes slideInLeft {
+			  from {
+				transform: translateX(-100%);
+				opacity: 0;
+			  }
+			  to {
+				transform: translateX(0);
+				opacity: 1;
+			  }
+			}
+			@keyframes slideInRight {
+			  from {
+				transform: translateX(100%);
+				opacity: 0;
+			  }
+			  to {
+				transform: translateX(0);
+				opacity: 1;
+			  }
+			}
+			@keyframes fadeInUp {
+			  from {
+				transform: translateY(100%);
+				opacity: 0;
+			  }
+			  to {
+				transform: translateY(0);
+				opacity: 1;
+			  }
+			}
+		
+			.animate-slideInLeft {
+			  animation: slideInLeft 1s ease-out;
+			}
+			.animate-slideInRight {
+			  animation: slideInRight 1s ease-out;
+			}
+			.animate-fadeInUp {
+			  animation: fadeInUp 1s ease-out;
+			}
+		  </style>
+		</head>
+<body>
+
+  <!-- 네비게이션 바 -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <a class="navbar-brand" href="index.html"><img src="/images/homelogo.png" alt="장바구니" style="height:24px;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="product.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="recipe.html">Recipe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="story.html">Story</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <a href="#" class="nav-link"><img src="/images/icon/search.png" alt="장바구니" style="width:24px; height:24px;"></a>
+        <input class="form-control mr-sm-2" type="search" placeholder="검색" aria-label="Search">
+      </form>
+      <a href="#" class="nav-link"><img src="/images/icon/cart.png" alt="장바구니" style="width:24px; height:24px;"></a>
+    </div>
+  </nav>
+
+  <!-- 탭 메뉴 -->
+  <ul class="nav nav-tabs mt-4 justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" id="pesto-tab" data-toggle="tab" href="#pesto" role="tab" aria-controls="pesto" aria-selected="true">Pesto</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="wanna-tab" data-toggle="tab" href="#wanna" role="tab" aria-controls="wanna" aria-selected="false">Wanna be more Nokjin?</a>
+    </li>
+  </ul>
+
+  <!-- 탭 컨텐츠 -->
+  <div class="tab-content" id="myTabContent">
+    <!-- Pesto 탭 -->
+    <div class="tab-pane fade show active" id="pesto" role="tabpanel" aria-labelledby="pesto-tab">
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img src="/images/ancho.png" class="card-img-top" alt="Dried Anchovy Pesto">
+              <div class="card-body">
+                <h5 class="card-title">Dried Anchovies Pesto</h5>
+                <p class="card-text">부산 기장의 햇살을 받은 건멸치로 만든 페스토입니다.</p>
+                <a href="productdetail.html" class="btn btn-primary">상세 보기</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="/images/gosari.png" class="card-img-top" alt="Gosari Pesto">
+              <div class="card-body">
+                <h5 class="card-title">Bracken Fern Pesto</h5>
+                <p class="card-text">제주 오름에서 갓 뜯은 고사리로 만든 페스토입니다.</p>
+                <a href="productdetail.html" class="btn btn-primary">상세 보기</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="/images/pumkin.png" class="card-img-top" alt="Pumpkin Pesto">
+              <div class="card-body">
+                <h5 class="card-title">Pumpkin Pesto</h5>
+                <p class="card-text">순창 노지에서 재배한 단호박으로 만든 페스토입니다.</p>
+                <a href="productdetail.html" class="btn btn-primary">상세 보기</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 페이지네이션 -->
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center mt-4">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Wanna be more Nokjin 탭 -->
+    <div class="tab-pane fade" id="wanna" role="tabpanel" aria-labelledby="wanna-tab">
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img src="/images/kalguksu.jpeg" class="card-img-top" alt="Kalguksu Dry Noodles">
+              <div class="card-body">
+                <h5 class="card-title">Kalguksu Dry Noodles</h5>
+                <a href="productdetail.html" class="btn btn-primary">상세 보기</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="/images/memil.jpg" class="card-img-top" alt="Memil Dry Noodles">
+              <div class="card-body">
+                <h5 class="card-title">Memil Dry Noodles</h5>
+                <a href="productdetail.html" class="btn btn-primary">상세 보기</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="/images/rice.jpeg" class="card-img-top" alt="Icheon Rice">
+              <div class="card-body">
+                <h5 class="card-title">Icheon Rice</h5>
+                <a href="productdetail.html" class="btn btn-primary">상세 보기</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="/images/cracker.jpeg" class="card-img-top" alt="Whole Wheat Crackers">
+              <div class="card-body">
+                <h5 class="card-title">Whole Wheat Crackers</h5>
+                <a href="productdetail.html" class="btn btn-primary">상세 보기</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 페이지네이션 -->
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center mt-4">
+          <li class="page
