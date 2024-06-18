@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dried Anchovies Pesto - Product Detail</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Quicksand', 'Pretendard', sans-serif;
+      background-color: #f8f9fa;
+      padding-top: 60px; /* 네비게이션 바 때문에 추가 */
+    }
+    .navbar-custom {
+      background-color: #343a40;
+    }
+    .navbar-custom .navbar-brand, .navbar-custom .nav-link {
+      color: #ffffff;
+    }
+    .navbar-custom .nav-link:hover {
+      color: #f8f9fa;
+    }
+    .card {
+      margin-bottom: 20px;
+      border: none;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .card-text {
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .btn-primary {
+      background-color: #5f3214;
+      border-color: #5f3214;
+    }
+    .btn-primary:hover {
+      background-color: #9ecced;
+      border-color: #9ecced;
+    }
+	body {
+		font-family: 'Quicksand', 'Pretendard', sans-serif;
+	  }
+	  .navbar-custom {
+		background-color: #5f3214 !important;
+	  }
+	  .navbar-custom .navbar-brand,
+	  .navbar-custom .navbar-nav .nav-link {
+		color: #9ecced;
+	  }
+	  .navbar-custom .navbar-brand:hover,
+	  .navbar-custom .navbar-nav .nav-link:hover {
+		color: #fff;
+	  }
+	  .carousel-item img {
+		width: 100%;
+		height: 50vh;
+		object-fit: cover;
+	  }
+	  .btn-primary {
+		background-color: #5f3214;
+		border-color: #5f3214;
+	  }
+	  .btn-primary:hover {
+		background-color: #9ecced;
+		border-color: #9ecced;
+	  }
+	  .jumbotron-custom {
+		background-color: #9ecced;
+		padding: 4rem 2rem;
+		margin-top: 2rem;
+		color: #5f3214;
+	  }
+	  .footer-custom {
+		background-color: #5f3214;
+		color: #9ecced;
+		padding: 1rem 0;
+	  }
+	  .carousel-caption {
+		position: absolute;
+		top: 10%;
+		left: 10%;
+		transform: translate(0, 0);
+		color: #5f3214;
+		text-align: left;
+		padding: 20px;
+		font-family: 'Pretendard', 'Quicksand', sans-serif;
+	  }
+	  .scrolling-wrapper {
+		overflow-x: auto;
+		white-space: nowrap;
+	  }
+	  .scrolling-wrapper .card {
+		display: inline-block;
+		width: 18rem;
+		margin-right: 1rem;
+		transition: transform 0.3s;
+	  }
+	  .scrolling-wrapper .card:hover {
+		transform: scale(1.05);
+	  }
+	  .fade-in {
+		opacity: 0;
+		transition: opacity 1.5s ease-in-out;
+	  }
+	  .fade-in.visible {
+		opacity: 1;
+	  }
+	  h2 {
+		font-size: 40pt;
+		font-weight: 700;
+		color: #9ecced;
+	  }
+  
+	  /* New CSS animations */
+	  @keyframes slideInLeft {
+		from {
+		  transform: translateX(-100%);
+		  opacity: 0;
+		}
+		to {
+		  transform: translateX(0);
+		  opacity: 1;
+		}
+	  }
+	  @keyframes slideInRight {
+		from {
+		  transform: translateX(100%);
+		  opacity: 0;
+		}
+		to {
+		  transform: translateX(0);
+		  opacity: 1;
+		}
+	  }
+	  @keyframes fadeInUp {
+		from {
+		  transform: translateY(100%);
+		  opacity: 0;
+		}
+		to {
+		  transform: translateY(0);
+		  opacity: 1;
+		}
+	  }
+  
+	  .animate-slideInLeft {
+		animation: slideInLeft 1s ease-out;
+	  }
+	  .animate-slideInRight {
+		animation: slideInRight 1s ease-out;
+	  }
+	  .animate-fadeInUp {
+		animation: fadeInUp 1s ease-out;
+	  }
+  </style>
+</head>
+<body>
+
+  <!-- 네비게이션 바 -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <a class="navbar-brand" href="index.html"><img src="/images/homelogo.png" alt="장바구니" style="height:24px;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="product.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="recipe.html">Recipe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="story.html">Story</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <a href="#" class="nav-link"><img src="/images/icon/search.png" alt="장바구니" style="width:24px; height:24px;"></a>
+        <input class="form-control mr-sm-2" type="search" placeholder="검색" aria-label="Search">
+      </form>
+      <a href="#" class="nav-link"><img src="/images/icon/cart.png" alt="장바구니" style="width:24px; height:24px;"></a>
+    </div>
+  </nav>
+
+  <!-- 제품 상세 정보 -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="card">
+          <img src="/images/ancho.png" class="card-img-top" alt="Dried Anchovy Pesto">
+          <div class="card-body">
+            <h5 class="card-title">Dried Anchovies Pesto</h5>
+            <p class="card-text">부산 기장의 햇살을 받은 건멸치로 만든 페스토입니다.</p>
+            <p class="card-text">장바구니 담기: <input type="number" value="1" min="1" style="width: 50px;"></p>
+            <p class="card-text">가격: ₩10,000</p>
+            <a href="#" class="btn btn-primary">구매하기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
